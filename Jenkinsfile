@@ -13,19 +13,34 @@ pipeline {
       }
     }
     stage('Dev') {
-      agent any
+      agent {
+        node {
+          label 'default'
+        }
+
+      }
       steps {
         echo 'Deploy to Dev'
       }
     }
     stage('Test') {
-      agent any
+      agent {
+        node {
+          label 'default'
+        }
+
+      }
       steps {
         echo 'Deploy to Test'
       }
     }
     stage('Prod') {
-      agent any
+      agent {
+        node {
+          label 'default'
+        }
+
+      }
       steps {
         echo 'Deploy to Prod'
       }
