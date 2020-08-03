@@ -1,10 +1,29 @@
 pipeline {
   agent any
   stages {
-    stage('Say Hello') {
+    stage('Build') {
+      agent any
       steps {
         echo 'Hi Wed'
       }
     }
+    stage('Dev') {
+      agent any
+      steps {
+        echo 'Deploy to Dev'
+      }
+    }
+    stage('Test') {
+      agent any
+      steps {
+        echo 'Deploy to Test'
+      }
+    }
+    stage('Prod') {
+      agent any
+      steps {
+        echo 'Deploy to Prod'
+      }
+    }
   }
-} 
+}
