@@ -2,7 +2,12 @@ pipeline {
   agent none
   stages {
     stage('Build') {
-      agent any
+      agent {
+        node {
+          label 'default'
+        }
+
+      }
       steps {
         echo 'Hi Wed'
       }
