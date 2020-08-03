@@ -9,7 +9,7 @@ pipeline {
 
       }
       steps {
-        echo 'Build'
+        echo 'Build Stage'
       }
     }
     stage('Dev') {
@@ -20,7 +20,7 @@ pipeline {
 
       }
       steps {
-        echo 'Deploy to Dev'
+        echo 'Dev Stage'
       }
     }
     stage('Test') {
@@ -31,7 +31,7 @@ pipeline {
 
       }
       steps {
-        echo 'Deploy to Test'
+        echo 'Test Stage'
       }
     }
     stage('Prod') {
@@ -42,7 +42,7 @@ pipeline {
 
       }
       steps {
-        echo 'Deploy to Prod'
+        echo 'Prod Stage'
       }
     }
   }
